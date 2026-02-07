@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Skintific.shop</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- MIDTRANS SNAP (SATU KALI SAJA) -->
+  <script 
+    src="https://app.sandbox.midtrans.com/snap/snap.js"
+    data-client-key="Mid-client-4injBXISeC7YMylF">
+  </script>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">skintific.shop</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#shop">Shop</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+    <button class="cart-btn" onclick="openCart()">🛒 Cart</button>
+  </nav>
+</header>
+
+<section id="home" class="hero" style="background-image:url('img/tema.jpg.jpg')">
+  <div class="overlay">
+    <h1>SKINTIFIC SHOP</h1>
+    <p>Belanja cepat, aman, dan praktis</p>
+    <button onclick="scrollToShop()">Shop Now</button>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2>About</h2>
+  <p class="center">
+    Skintific.shop merupakan platform toko online yang bergerak di bidang penjualan produk perawatan kulit (skincare).
+  </p>
+</section>
+
+<section id="shop" class="section">
+<h2>Produk Skintific</h2>
+
+<div class="product-grid">
+
+  <div class="product">
+    <img src="img/cushion.jpg">
+    <h3>Cushion</h3>
+    <p>Rp 190.000</p>
+    <button onclick="addItem('Cushion',190000)">Add</button>
+  </div>
+
+  <div class="product">
+    <img src="img/powder.jpg">
+    <h3>Loose Powder</h3>
+    <p>Rp 180.000</p>
+    <button onclick="addItem('Loose Powder',180000)">Add</button>
+  </div>
+
+  <div class="product">
+    <img src="img/toner.jpg">
+    <h3>Toner</h3>
+    <p>Rp 110.000</p>
+    <button onclick="addItem('Toner',110000)">Add</button>
+  </div>
+
+  <div class="product">
+    <img src="img/sunscreen.jpg">
+    <h3>Sunscreen</h3>
+    <p>Rp 130.000</p>
+    <button onclick="addItem('Sunscreen',130000)">Add</button>
+  </div>
+
+  <div class="product">
+    <img src="img/serum.jpg">
+    <h3>Serum</h3>
+    <p>Rp 120.000</p>
+    <button onclick="addItem('Serum',120000)">Add</button>
+  </div>
+
+  <div class="product">
+    <img src="img/mask.jpg">
+    <h3>Face Mask</h3>
+    <p>Rp 85.000</p>
+    <button onclick="addItem('Face Mask',85000)">Add</button>
+  </div>
+
+  <div class="product">
+    <img src="img/serum spray.jpg">
+    <h3>Serum Spray</h3>
+    <p>Rp 140.000</p>
+    <button onclick="addItem('Serum Spray',140000)">Add</button>
+  </div>
+
+  <div class="product">
+    <img src="img/skintint.jpg">
+    <h3>Skintint</h3>
+    <p>Rp 155.000</p>
+    <button onclick="addItem('Skintint',155000)">Add</button>
+  </div>
+
+  <div class="product">
+    <img src="img/peeling serum.jpg">
+    <h3>Peeling Serum</h3>
+    <p>Rp 135.000</p>
+    <button onclick="addItem('Peeling Serum',135000)">Add</button>
+  </div>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: skintific.shop@gmail.com</p>
+  <p>WhatsApp: 08xxxxxxxxxx</p>
+</section>
+
+<footer>
+<p>© 2026 Skintific.shop | UAS Web Programming</p>
+</footer>
+
+<!-- MODAL CART (SATU SAJA) -->
+<div class="modal" id="cartModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCart()">&times;</span>
+    <h2>Checkout</h2>
+    <div id="cartItems"></div>
+    <button class="checkout-btn" onclick="orderWhatsApp()">Order via WhatsApp</button>
+  </div>
+</div>
+
+<section id="order" class="section order-section">
+<h2>Form Order</h2>
+
+<form class="order-form">
+  <input type="text" placeholder="Nama Lengkap" required>
+  <input type="text" placeholder="Alamat Lengkap" required>
+  <input type="tel" placeholder="No. WhatsApp" required>
+
+  <select required>
+    <option value="">Metode Pembayaran</option>
+    <option>Transfer Bank</option>
+    <option>COD</option>
+    <option>E-Wallet</option>
+  </select>
+
+  <button type="button" onclick="orderWhatsApp()">Kirim Pesanan</button>
+  <button type="button" onclick="bayar()">Bayar Sekarang</button>
+</form>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
